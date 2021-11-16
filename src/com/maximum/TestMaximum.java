@@ -2,27 +2,27 @@ package com.maximum;
 
 public class TestMaximum {
 	
-	private Float num1;
-	private Float num2;
-	private Float num3;
-	private Float max;
+	private String obj1;
+	private String obj2;
+	private String obj3;
+	private String max;
 	
-	public TestMaximum(Float num1, Float num2, Float num3) {
+	public TestMaximum(String obj1, String obj2, String obj3) {
 		super();
-		this.num1 = num1;
-		this.num2 = num2;
-		this.num3 = num3;
+		this.obj1 = obj1;
+		this.obj2 = obj2;
+		this.obj3 = obj3;
 	}
 	
-	public Float returnMax() {
-		if(num1.compareTo(num2) > 0){
-			max = num1; 
+	public String returnMax() {
+		if(obj1.compareTo(obj2) > 0){
+			max = obj1; 
 		}
-		else if(num1.compareTo(num2) < 0) {
-			max = num2;
+		else if(obj1.compareTo(obj2) < 0) {
+			max = obj2;
 		}
-		if(max.compareTo(num3) < 0) {
-			max = num3;
+		if(max.compareTo(obj3) < 0) {
+			max = obj3;
 		}
 		return max;
 	}
@@ -30,7 +30,7 @@ public class TestMaximum {
 
 	@Override
 	public String toString() {
-		return "Maximum Number = " + max;
+		return "Maximum String = " + max;
 	}
 
 }
