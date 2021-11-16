@@ -2,19 +2,19 @@ package com.maximum;
 
 public class TestMaximum {
 	
-	private Integer num1;
-	private Integer num2;
-	private Integer num3;
-	private Integer max;
+	private Float num1;
+	private Float num2;
+	private Float num3;
+	private Float max;
 	
-	public TestMaximum(Integer num1, Integer num2, Integer num3) {
+	public TestMaximum(Float num1, Float num2, Float num3) {
 		super();
 		this.num1 = num1;
 		this.num2 = num2;
 		this.num3 = num3;
 	}
 	
-	public Integer returnMax() {
+	public Float returnMax() {
 		if(num1.compareTo(num2) > 0){
 			max = num1; 
 		}
