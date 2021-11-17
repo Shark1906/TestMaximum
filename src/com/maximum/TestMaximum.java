@@ -2,19 +2,11 @@ package com.maximum;
 
 public class TestMaximum {
 	
-	private String obj1;
-	private String obj2;
-	private String obj3;
-	private String max;
 	
-	public TestMaximum(String obj1, String obj2, String obj3) {
-		super();
-		this.obj1 = obj1;
-		this.obj2 = obj2;
-		this.obj3 = obj3;
-	}
 	
-	public String returnMax() {
+	public static <E extends Comparable<E>> E returnMax(E obj1, E obj2, E obj3) {
+		
+		E max=null;
 		if(obj1.compareTo(obj2) > 0){
 			max = obj1; 
 		}
@@ -26,11 +18,4 @@ public class TestMaximum {
 		}
 		return max;
 	}
-	
-
-	@Override
-	public String toString() {
-		return "Maximum String = " + max;
-	}
-
 }
