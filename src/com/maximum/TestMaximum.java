@@ -1,12 +1,20 @@
 package com.maximum;
 
-public class TestMaximum {
+public class TestMaximum<E extends Comparable<E>> {
 	
+	private E obj1;
+	private E obj2;
+	private E obj3;
+	private E max;
 	
+	public TestMaximum(E obj1, E obj2, E obj3) {
+		super();
+		this.obj1 = obj1;
+		this.obj2 = obj2;
+		this.obj3 = obj3;
+	}
 	
-	public static <E extends Comparable<E>> E returnMax(E obj1, E obj2, E obj3) {
-		
-		E max=null;
+	public E returnMax() {
 		if(obj1.compareTo(obj2) > 0){
 			max = obj1; 
 		}
@@ -17,5 +25,10 @@ public class TestMaximum {
 			max = obj3;
 		}
 		return max;
+	}
+	
+	@Override
+	public String toString() {
+		return "Maximum Value = " + max;
 	}
 }
