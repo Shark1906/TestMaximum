@@ -3,18 +3,19 @@ package com.maximum;
 public class Main {
 	
 	public static void main(String[] args) {
-		
-		TestMaximum maximum = new TestMaximum();
-		
-		//Test Case 3.1			
-			System.out.println("Maximum value : " + maximum.returnMax("AmanZ", "AmanB", "AmanG"));
+		//Test Case 3.1
+			TestMaximum<String> maximum1 = new TestMaximum<String>("AmanZ", "AmanB", "AmanG");
+			maximum1.returnMax();
+			System.out.println(maximum1);
 		
 		//Test Case 3.2
-			System.out.println("Maximum value : " + maximum.returnMax(12,24,21));
+			TestMaximum<Integer> maximum2 = new TestMaximum<Integer>(22, 56, 34);
+			maximum2.returnMax();
+			System.out.println(maximum2);
 				
 		//Test Case 3.3
-			System.out.println("Maximum value : " + maximum.returnMax(25f, 45f, 51f));
-		
+			TestMaximum<Float> maximum3 = new TestMaximum<Float>(12f, 24f, 43f);
+			maximum3.returnMax();
+			System.out.println(maximum3);
 	}
-
 }
